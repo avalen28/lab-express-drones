@@ -10,7 +10,7 @@ const drones = [
 
 const Drone = require("../models/Drone.model");
 
-const MONGO_URL = "mongodb://localhost:27017/drones";
+const MONGO_URL = "mongodb://localhost:27017/lab-express-drones";
 
 mongoose
   .connect(MONGO_URL)
