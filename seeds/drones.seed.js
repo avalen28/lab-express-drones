@@ -1,4 +1,4 @@
-// Iteration #1  ----- collection and Mongoose call
+// Iteration #1  ----- seed data and Mongoose call
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 
