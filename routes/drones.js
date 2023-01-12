@@ -51,15 +51,17 @@ router.post("/drones/:id/edit", (req, res, next) => {
         res.render("drones/update-form", dataFromDB)
       )
     );
-
-  /*.catch(() => {
-      Drone.findById(id)
-      .then((dataFromDB) => res.render("drones/update-form", dataFromDB))*/
 });
 
 router.post("/drones/:id/delete", (req, res, next) => {
   // Iteration #5: Delete the drone
-  // ... your code here
+  const { id } = req.params;
+  Drone.findByIdAndDelete(id)
+    .then(() => {
+      console.log("item removed");
+      res.redirect("/drones");
+    })
+    .catch((err) => console.log(err));
 });
 
 module.exports = router;
